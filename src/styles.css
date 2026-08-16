@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -97,6 +99,32 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
+/* NorthVerse cinematic dark theme */
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.13 0.028 258);
+  --foreground: oklch(0.98 0.005 250);
+  --card: oklch(0.17 0.03 258 / 0.62);
+  --card-foreground: oklch(0.98 0.005 250);
+  --popover: oklch(0.16 0.03 258);
+  --popover-foreground: oklch(0.98 0.005 250);
+  --primary: oklch(0.58 0.2 259);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --secondary: oklch(0.24 0.03 258);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.24 0.03 258);
+  --muted-foreground: oklch(0.76 0.02 255);
+  --accent: oklch(0.62 0.2 259);
+  --accent-foreground: oklch(0.99 0.005 250);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.58 0.2 259);
+
+  --gradient-warm: linear-gradient(140deg, oklch(0.88 0.15 78), oklch(0.72 0.16 55));
+  --shadow-glow: 0 0 26px -4px oklch(0.58 0.2 259 / 0.75);
+  --shadow-glass: 0 18px 48px -18px oklch(0.05 0.02 255 / 0.95);
+}
+
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -132,6 +160,19 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@utility glass-panel {
+  background: oklch(0.15 0.03 258 / 0.62);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid oklch(1 0 0 / 0.11);
+  box-shadow: var(--shadow-glass);
+}
+
+@keyframes nv-route-flow {
+  to {
+    stroke-dashoffset: -160;
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -141,4 +182,23 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+.nv-route-dash {
+  animation: nv-route-flow 6s linear infinite;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
