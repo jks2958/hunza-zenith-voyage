@@ -138,6 +138,7 @@ export function useWorldView(containerRef: React.RefObject<HTMLDivElement | null
       last.current = { x: e.clientX, y: e.clientY };
     } else if (pointers.current.size === 2) {
       const [a, b] = [...pointers.current.values()];
+      if (!a || !b) return;
       pinch.current = {
         dist: Math.hypot(a.x - b.x, a.y - b.y),
         zoom: viewRef.current.zoom,
@@ -154,6 +155,7 @@ export function useWorldView(containerRef: React.RefObject<HTMLDivElement | null
       if (!el) return;
       const rect = el.getBoundingClientRect();
       const [a, b] = [...pointers.current.values()];
+      if (!a || !b) return;
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
       const cx = (a.x + b.x) / 2 - rect.left;
       const cy = (a.y + b.y) / 2 - rect.top;
