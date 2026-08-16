@@ -34,8 +34,8 @@ export const destinations: Destination[] = [
     name: "Baltit Fort",
     category: "Starting Point",
     icon: "fort",
-    x: 0.28,
-    y: 0.73,
+    x: 0.275,
+    y: 0.735,
     image: d1.url,
     description:
       "A 700-year-old royal fort watching over Karimabad. Restored timber balconies, whitewashed halls and a terrace that opens onto the whole valley.",
@@ -55,8 +55,8 @@ export const destinations: Destination[] = [
     name: "Karimabad",
     category: "Village",
     icon: "village",
-    x: 0.475,
-    y: 0.425,
+    x: 0.4,
+    y: 0.57,
     image: d2.url,
     description:
       "The beating heart of Hunza. Stone lanes, apricot orchards and rooftop cafés facing Rakaposhi across the valley.",
@@ -75,8 +75,8 @@ export const destinations: Destination[] = [
     name: "Altit Fort",
     category: "Historic Fort",
     icon: "fort",
-    x: 0.355,
-    y: 0.535,
+    x: 0.5,
+    y: 0.47,
     image: d3.url,
     description:
       "The oldest monument in Gilgit-Baltistan, balanced on a sheer rock above the Hunza River, with the Royal Garden below.",
@@ -96,7 +96,7 @@ export const destinations: Destination[] = [
     category: "Lake",
     icon: "lake",
     x: 0.655,
-    y: 0.4,
+    y: 0.395,
     image: d4.url,
     description:
       "An impossibly turquoise lake born from a 2010 landslide, now the most photographed water in northern Pakistan.",
@@ -115,8 +115,8 @@ export const destinations: Destination[] = [
     name: "Passu Cones",
     category: "Viewpoint",
     icon: "peak",
-    x: 0.34,
-    y: 0.275,
+    x: 0.735,
+    y: 0.3,
     image: d5.url,
     description:
       "The cathedral ridge of Hunza — saw-toothed granite spires that rise straight out of the Karakoram Highway.",
@@ -135,8 +135,8 @@ export const destinations: Destination[] = [
     name: "Hussaini Bridge",
     category: "Bridge",
     icon: "bridge",
-    x: 0.635,
-    y: 0.565,
+    x: 0.815,
+    y: 0.22,
     image: d6.url,
     description:
       "A swaying plank-and-rope crossing over the Hunza River, regularly called one of the most thrilling bridges on earth.",
@@ -155,8 +155,8 @@ export const destinations: Destination[] = [
     name: "Khunjerab Pass",
     category: "Mountain Pass",
     icon: "pass",
-    x: 0.805,
-    y: 0.78,
+    x: 0.885,
+    y: 0.145,
     image: d7.url,
     description:
       "The highest paved border crossing in the world, where the Karakoram Highway meets the Pamir plateau and China.",
@@ -172,22 +172,21 @@ export const destinations: Destination[] = [
 ];
 
 export const mountainLabels = [
-  { id: "rakaposhi", name: "Rakaposhi", elevation: "7,788 m", x: 0.52, y: 0.075 },
-  { id: "ultar-sar", name: "Ultar Sar", elevation: "7,388 m", x: 0.855, y: 0.13 },
-  { id: "passu-peaks", name: "Passu Cones", elevation: "", x: 0.2, y: 0.2 },
+  { id: "rakaposhi", name: "Rakaposhi", elevation: "7,788 m", x: 0.44, y: 0.11 },
+  { id: "ultar-sar", name: "Ultar Sar", elevation: "7,388 m", x: 0.13, y: 0.28 },
 ];
 
 /** subtle warm village lights scattered around the valley */
 export const warmLights = [
-  { x: 0.28, y: 0.73 },
+  { x: 0.275, y: 0.735 },
   { x: 0.31, y: 0.7 },
-  { x: 0.475, y: 0.425 },
-  { x: 0.5, y: 0.45 },
-  { x: 0.355, y: 0.535 },
-  { x: 0.655, y: 0.4 },
-  { x: 0.34, y: 0.275 },
-  { x: 0.635, y: 0.565 },
-  { x: 0.805, y: 0.78 },
-  { x: 0.72, y: 0.62 },
-  { x: 0.42, y: 0.48 },
+  { x: 0.40, y: 0.57 },
+  { x: 0.47, y: 0.5 },
+  { x: 0.50, y: 0.47 },
+  { x: 0.655, y: 0.395 },
+  { x: 0.735, y: 0.3 },
+  { x: 0.815, y: 0.22 },
+  { x: 0.885, y: 0.145 },
+  { x: 0.6, y: 0.44 },
+  { x: 0.36, y: 0.63 },
 ];
