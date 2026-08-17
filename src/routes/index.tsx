@@ -56,6 +56,12 @@ function Journey() {
       ref={containerRef}
       className="fixed inset-0 touch-none overflow-hidden bg-background"
       style={{ cursor: started ? "grab" : "default" }}
+      // the world layer overflows the viewport; focusing a marker can scroll
+      // the container, which would shift every fixed UI layer sideways
+      onScroll={(e) => {
+        e.currentTarget.scrollLeft = 0;
+        e.currentTarget.scrollTop = 0;
+      }}
       {...(started ? world.bind : {})}
     >
       <JourneyWorld view={world.view} base={world.base} animate={world.animate}>
