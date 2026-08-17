@@ -44,7 +44,7 @@ function Journey() {
     (d: Destination) => {
       setActive(d);
       const mobile = world.size.w < 640;
-      world.focus(d.x, d.y, mobile ? 1.9 : 2.3, mobile ? -90 : -40);
+      world.focus(d.x, d.y, mobile ? 1.6 : 1.95, mobile ? -140 : -40);
     },
     [world],
   );
@@ -54,7 +54,7 @@ function Journey() {
   return (
     <main
       ref={containerRef}
-      className="relative h-screen w-screen touch-none overflow-hidden bg-background"
+      className="fixed inset-0 touch-none overflow-clip bg-background"
       style={{ cursor: started ? "grab" : "default" }}
       {...(started ? world.bind : {})}
     >
