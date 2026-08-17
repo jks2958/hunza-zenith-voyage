@@ -93,11 +93,14 @@ function Journey() {
 
       {destinations.map((d) => {
         const p = world.project(d.x, d.y);
+        // keep glass labels inside the viewport on narrow screens
+        const pad = world.size.w < 640 ? 78 : 96;
+        const left = Math.min(Math.max(p.left, pad), Math.max(pad, world.size.w - pad));
         return (
           <DestinationMarker
             key={d.id}
             destination={d}
-            left={p.left}
+            left={left}
             top={p.top}
             active={active?.id === d.id}
             onSelect={() => {
